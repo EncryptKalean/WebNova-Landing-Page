@@ -1,0 +1,74 @@
+#hero {
+  height: 80dvh;
+}
+
+#textos,
+.ilustracao {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#textos h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 130%;
+}
+
+#hero .btns_container {
+  gap: 20px;
+}
+
+#hero .btns_container a {
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.5s;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+#hero a:hover, #hero a:focus{
+  scale: 1.06;
+}
+
+.CTA {
+  position: relative;
+  color: black !important;
+  background: yellow;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.CTA::before {
+  content: "Fale conosco";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+  inset: 0;
+  background: var(--btn_background);
+  opacity: 1;
+  pointer-events: none;
+  transition: opacity 0.5s;
+}
+
+.CTA:hover::before, .CTA:focus::before {
+  opacity: 0;
+}
+
+#hero .btns_container a:nth-of-type(2) {
+  color: var(--btn_background_2);
+  border: 2px solid currentColor;
+}
+
+.ilustracao {
+  background: url(../imagens/ilustracao_laptop.webp) no-repeat center center /
+    contain;
+  filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.2));
+}

@@ -1,0 +1,49 @@
+#sobre .center{
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+#cards_container{
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+    width: 100%;
+    justify-content: center;
+}
+
+.card{
+    background: var(--cards_background);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(90% / 4);
+    max-width: 250px;
+    gap: 15px;
+    padding: 20px;
+    transition: 0.7s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid transparent;
+}
+
+.card:hover, .card:focus{
+    transform: translateY(-10px);
+    filter: brightness(1.1);
+    border-color: var(--btn_background_2);
+}
+
+.card svg{
+    color: var(--cards_icons_color);
+    width: auto;
+    max-width: 90px;
+    aspect-ratio: 1;
+    opacity: 0.8;
+    transition: inherit;
+}
+
+.card:hover svg, .card:focus svg{
+    filter: brightness(1.1);
+    opacity: 1;
+}

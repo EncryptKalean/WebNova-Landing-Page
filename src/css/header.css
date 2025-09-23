@@ -1,0 +1,64 @@
+header {
+  position: sticky;
+  top: -1px;
+  padding: 1% 2%;
+  transition: opacity 0.5s, box-shadow 0.5s;
+  z-index: 1;
+  margin-left: calc(var(--padding_do_body) - (var(--padding_do_body) * 2));
+  width: calc(100% + (var(--padding_do_body) * 2));
+}
+
+#segundo_background {
+  position: absolute;
+  inset: 0;
+  background: var(--btn_background);
+  z-index: 0;
+  transition: inherit;
+  opacity: 0;
+}
+
+header.isSticky #segundo_background {
+  opacity: 1;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+header div.center {
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+
+header div.center span:nth-of-type(2) {
+  color: var(--btn_background_2);
+}
+
+.btns_container {
+  display: flex;
+  gap: 30px;
+}
+
+.btns_container a {
+  color: inherit;
+  position: relative;
+}
+
+header .btns_container a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.5s ease;
+}
+
+header.isSticky a::after {
+  background-color: orange;
+}
+
+header a:hover::after,
+header a:focus::after {
+  width: 100%;
+}

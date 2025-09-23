@@ -1,0 +1,74 @@
+#call_to_action {
+  background: linear-gradient(90deg, #4e2abd, #278fe4);
+  height: 60vh;
+  width: 100vw;
+  margin-left: calc(var(--padding_do_body) - (var(--padding_do_body) * 2.2));
+  padding: 3% !important;
+  margin-top: 200px;
+}
+
+#call_to_action a:focus-visible{
+  transition: outline-offset 0.5s;
+  outline-color: yellow;
+  outline-offset: 5px;
+  border-radius: 10px;
+}
+
+#call_to_action .center {
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+#call_to_action h2{
+    max-width: 600px;
+    text-align: center;
+}
+
+#CTA_Final {
+  padding: 15px 20px;
+  border-radius: 10px;
+  font-size: 25px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  color: var(--btn_background_2);
+  background: transparent;
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  place-items: center;
+  transition: 0.5s;
+  animation: infinite anim1 2s linear;
+}
+
+#CTA_Final::before {
+  content: "Fale conosco";
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 0;
+  color: black !important;
+  background: yellow;
+  opacity: 1;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+#CTA_Final:hover::before, #CTA_Final:focus::before {
+  opacity: 0;
+}
+
+#CTA_Final:hover, #CTA_Final:focus{
+  border-color: currentColor;
+}
+
+@keyframes anim1 {
+  0%{
+    scale: 1;
+  }
+
+  50%{
+    scale: 1.1;
+  }
+}

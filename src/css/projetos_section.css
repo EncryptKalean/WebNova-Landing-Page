@@ -1,0 +1,111 @@
+:root {
+  /* Quantas casas vão aparecer na vitrine */
+  --quantidade_exposta: 3;
+
+  /* Quantas casas vão ser puladas por giro */
+  --casas_por_giro: 1;
+
+  --tamanho_bloco: 300px;
+
+  /* Tempo que o carrossel demora para andar as casas (em segundos) */
+  --tempo_carrossel: 5;
+}
+
+#projetos .center {
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+#vitrine_projetos {
+  overflow-x: auto;
+  overflow-y: visible;
+  scroll-behavior: smooth;
+  scrollbar-color: transparent;
+  padding: 10px 0;
+  width: calc((var(--tamanho_bloco) + 1.3%) * var(--quantidade_exposta));
+  align-content: center;
+}
+
+/* --------- Escondendo scrollbar */
+
+/* Para Chrome, Safari e Opera */
+#vitrine_projetos::-webkit-scrollbar {
+  display: none;
+}
+
+/* Para Firefox */
+#vitrine_projetos {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE e Edge */
+}
+
+/* --------- Escondendo scrollbar */
+
+#trilho {
+  min-width: 100%;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.projeto_card {
+  width: var(--tamanho_bloco);
+  background: var(--cards_background);
+  padding: 10px;
+  padding-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 15px;
+  border-radius: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  transition: 0.5s;
+  border: 2px solid transparent;
+}
+
+.projeto_card:hover,
+.projeto_card:focus {
+  filter: brightness(1.1);
+  transform: translateY(-3px);
+  border-color: var(--btn_background_2);
+}
+
+.projeto_card img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.projeto_card a {
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  color: black !important;
+  background: yellow;
+  overflow: hidden;
+  align-self: center;
+}
+
+.projeto_card a::before {
+  content: "Ver Mais";
+  display: grid;
+  place-items: center;
+  color: white;
+  position: absolute;
+  inset: 0;
+  background: var(--btn_background);
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.projeto_card a:hover::before,
+.projeto_card a:focus::before {
+  opacity: 0;
+}

@@ -1,0 +1,127 @@
+@media screen and (max-width: 1200px) {
+  :root {
+    /* -- Body */
+    --padding_do_body: 5%;
+
+    /* -- Projetos */
+    --quantidade_exposta: 2;
+    --casas_por_giro: 2;
+
+    /* -- Comentarios */
+    --casas_por_giro_comentario: 2;
+  }
+
+  /* HERO */
+  #textos h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  :root {
+    /* -- Projetos */
+    --quantidade_exposta: 1;
+
+    /* -- Comentarios */
+    --quantidade_exposta_comentario: 1;
+    --tempo_carrossel_comentario: 5;
+  }
+
+  .center {
+    flex-direction: column;
+  }
+
+  /* Hero */
+  #hero .center {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 50px;
+  }
+
+  #hero .center > div {
+    width: 100%;
+  }
+
+  #hero .btns_container {
+    justify-content: center;
+  }
+
+  .ilustracao {
+    height: 30dvh;
+  }
+
+  /* Quem Somos */
+  #cards_container {
+    flex-wrap: wrap;
+  }
+
+  .card {
+    width: calc(90% / 2);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    /* -- Body */
+    --padding_do_body: 10px;
+
+    /* Projetos */
+    --tamanho_bloco: 250px;
+
+    /* Comentarios */
+    --tamanho_bloco_comentario: calc(
+      60vw / var(--quantidade_exposta_comentario)
+    );
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  /* Header */
+  header .btns_container {
+    display: none;
+  }
+
+  /* Hero */
+  .ilustracao {
+    display: none;
+  }
+
+  #textos h1 {
+    font-size: 35px;
+  }
+
+  #hero .btns_container {
+    flex-direction: column;
+  }
+
+  /* Quem Somos */
+  .card {
+    width: calc(80% / 2);
+    font-size: 13px;
+  }
+
+  /* Seta dos Carrosseis */
+  .setasCarrossel_container > div {
+    width: 45px;
+  }
+
+  /* Projetos */
+  .projeto_card {
+    padding: 10px 3px;
+    font-size: 15px;
+  }
+
+  /* CTA */
+
+  #call_to_action h2 {
+    font-size: 30px;
+  }
+
+  #CTA_Final {
+    padding: 10px 15px;
+    font-size: 20px;
+  }
+}

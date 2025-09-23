@@ -1,0 +1,115 @@
+:root{
+  --background: linear-gradient(#0c0f2e, #0F172A);
+  --btn_background: linear-gradient(90deg, #5428f0, #0893d1);
+  --btn_background_2: cyan;
+
+  /* Quem Somos Section */
+  --cards_background:#0b1e3c;
+  --cards_icons_color: #4676e7;
+
+  --padding_do_body: 3%;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, Georgia, 'Times New Roman', Times, serif;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+*:focus-visible{
+  transition: outline-offset 0.5s;
+  outline: 3px solid #4a90e2;
+  outline-offset: 10px;
+  border-radius: 10px;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  color: white;
+  height: 100%;
+  background: var(--background) no-repeat;
+  padding: 3% var(--padding_do_body);
+  padding-bottom: 0;
+  overflow-x: hidden;
+}
+
+section, header{
+  width: 100%;
+  align-content: center;
+}
+
+section:not(#hero){
+  padding: 100px 0;
+}
+
+.center{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  position: relative;
+}
+
+.center p{
+  color: #94A3B8;
+}
+
+h2{
+  font-size: 35px;
+}
+
+/* ----------- SETAS CARROSSEL */
+
+.setasCarrossel_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  pointer-events: none;
+  /* Desliga a seleção de texto */
+  user-select: none;
+  -webkit-user-select: none; /* Safari/Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+}
+
+.setasCarrossel_container > button {
+  pointer-events: stroke;
+  background: var(--btn_background);
+  color: white;
+  border-radius: 50%;
+  width: 55px;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: 0.5s;
+  opacity: 0.8;
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+.setasCarrossel_container .setaDireita {
+  transform: rotateY(180deg);
+}
+
+.setasCarrossel_container > div:hover,
+.setasCarrossel_container > div:focus {
+  scale: 1.1;
+  filter: brightness(1.3) blur(0.6px);
+  opacity: 0.9;
+}
+
+.setasCarrossel_container svg {
+  width: 100%;
+  aspect-ratio: 1;
+}
