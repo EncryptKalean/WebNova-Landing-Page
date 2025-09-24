@@ -1,4 +1,4 @@
-@media screen and (max-width: 1200px) {
+@media (width < 75rem) {
   :root {
     /* -- Body */
     --padding_do_body: 5%;
@@ -13,11 +13,11 @@
 
   /* HERO */
   #textos h1 {
-    font-size: 50px;
+    font-size: 5rem;
   }
 }
 
-@media screen and (max-width: 900px) {
+@media (width < 56.25rem) {
   :root {
     /* -- Projetos */
     --quantidade_exposta: 1;
@@ -61,7 +61,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (width < 37.5rem) {
   :root {
     /* -- Body */
     --padding_do_body: 10px;
@@ -76,7 +76,7 @@
   }
 
   h2 {
-    font-size: 30px;
+    font-size: 3rem;
   }
 
   /* Header */
@@ -90,7 +90,7 @@
   }
 
   #textos h1 {
-    font-size: 35px;
+    font-size: 3.5rem;
   }
 
   #hero .btns_container {
@@ -100,7 +100,7 @@
   /* Quem Somos */
   .card {
     width: calc(80% / 2);
-    font-size: 13px;
+    font-size: 1.3rem;
   }
 
   /* Seta dos Carrosseis */
@@ -111,17 +111,17 @@
   /* Projetos */
   .projeto_card {
     padding: 10px 3px;
-    font-size: 15px;
+    font-size: 1.5rem;
   }
 
   /* CTA */
 
   #call_to_action h2 {
-    font-size: 30px;
+    font-size: 3rem;
   }
 
   #CTA_Final {
     padding: 10px 15px;
-    font-size: 20px;
+    font-size: 2rem;
   }
 }

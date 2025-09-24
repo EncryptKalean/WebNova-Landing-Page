@@ -6,6 +6,7 @@ header {
   z-index: 1;
   margin-left: calc(var(--padding_do_body) - (var(--padding_do_body) * 2));
   width: calc(100% + (var(--padding_do_body) * 2));
+  font-size: 1.6rem;
 }
 
 #segundo_background {

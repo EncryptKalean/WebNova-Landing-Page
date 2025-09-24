@@ -28,7 +28,7 @@
 #CTA_Final {
   padding: 15px 20px;
   border-radius: 10px;
-  font-size: 25px;
+  font-size: 2.5rem;
   font-weight: bold;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   color: var(--btn_background_2);

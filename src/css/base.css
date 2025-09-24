@@ -28,6 +28,7 @@
 
 html{
   scroll-behavior: smooth;
+  font-size: 62.5%;
 }
 
 body{
@@ -37,6 +38,7 @@ body{
   padding: 3% var(--padding_do_body);
   padding-bottom: 0;
   overflow-x: hidden;
+  font-size: 1.6rem;
 }
 
 section, header{
@@ -61,7 +63,15 @@ section:not(#hero){
 }
 
 h2{
-  font-size: 35px;
+  font-size: 3.5rem;
+}
+
+h3{
+  font-size: 2rem;
+}
+
+p{
+  font-size: 1.6rem;
 }
 
 /* ----------- SETAS CARROSSEL */
