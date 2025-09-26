@@ -40,6 +40,17 @@ function carrossel(quantidade_de_itens, progresso_carrossel, trilho, quantidade_
 
 
 
+// Animação de quando um item entrar na tela
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    // isIntersecting é um boolean, true or false, então aqui no toggle é como se ele estivesse falando "classe show = true" ou "classe show = false"
+    entry.target.classList.toggle('show', entry.isIntersecting);
+  })
+})
+
+
+
 // ---------------------------------------------------- Carrossel Automatico de projetos
 
 const projetos = document.querySelectorAll('.projeto_card');
@@ -67,6 +78,12 @@ const padraoCarrosselProjetos = setInterval(() => {
 }, velocidade_projetos * 1000);
 
 if (projetos.length > quantidade_exposta_projetos) ativar_carrossel_projetos = padraoCarrosselProjetos;
+
+// Animação de quando o item aparece na tela
+projetos.forEach((el) => {
+  el.classList.add('show');
+  observer.observe(el);
+});
 
 
 
@@ -97,6 +114,11 @@ const padraoCarrosselComentarios = setInterval(() => {
 
 if (comentarios.length > quantidade_exposta_comentarios) ativar_carrossel_comentarios = padraoCarrosselComentarios;
 
+// Animação de quando o item aparece na tela
+comentarios.forEach((el) => {
+  el.classList.add('show');
+  observer.observe(el);
+});
 
 
 // ---------------------------------------------------- EventListener dos botões do carrossel
@@ -131,22 +153,6 @@ containers_btn_carrossel.forEach((el) => {
     };
   })
 })
-
-
-
-// ------------------------------------------------------- HEADER
-
-const stickyElm = document.querySelector('header');
-
-const observer = new IntersectionObserver(
-  ([entry]) => {
-    stickyElm.classList.toggle('isSticky', entry.intersectionRatio < 1);
-  },
-  { threshold: [1] }
-);
-
-observer.observe(stickyElm);
-
 
 
 

@@ -12,13 +12,14 @@ O projeto destaca-se por:
 - Foco em **acessibilidade** e **experiência do usuário**.
 - Carrosséis **100% desenvolvidos por mim**, sem copiar de outros exemplos.
 
-![WebNova Preview](https://github.com/EncryptKalean/WebNova-Landing-Page/blob/main/src/imagens/preview.webp?raw=true)
-
 ---
 
 ## 🚀 Start
 
 https://encryptkalean.github.io/WebNova-Landing-Page/
+
+
+![WebNova Preview](https://github.com/EncryptKalean/WebNova-Landing-Page/blob/main/src/imagens/preview.webp?raw=true)
 
 ---
 
