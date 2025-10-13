@@ -50,7 +50,6 @@ const observer = new IntersectionObserver((entries) => {
 })
 
 
-
 // ---------------------------------------------------- Carrossel Automatico de projetos
 
 const projetos = document.querySelectorAll('.projeto_card');
@@ -84,8 +83,6 @@ projetos.forEach((el) => {
   el.classList.add('show');
   observer.observe(el);
 });
-
-
 
 // ---------------------------------------------------- Carrossel Automatico de comentarios
 
@@ -171,3 +168,15 @@ window.addEventListener('resize', () => {
   valorCss_projetos = +getComputedStyle(document.documentElement).getPropertyValue('--casas_por_giro');
   valorCss_comentarios = +getComputedStyle(document.documentElement).getPropertyValue('--casas_por_giro_comentario');
 });
+
+
+// Transição do header
+const header = document.querySelector('header');
+
+const headerObserver = new IntersectionObserver((entry) => {
+  entry.forEach((el) => {
+    el.target.classList.toggle('isSticky', !el.isIntersecting);
+  })
+}, { threshold: 1 });
+
+headerObserver.observe(header);
